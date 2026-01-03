@@ -1,0 +1,80 @@
+my-portfolio/
+│
+├── .next/                  # Auto-generated (ignore)
+├── node_modules/           # Auto-generated (ignore)
+│
+├── public/
+│   ├── images/
+│   │   ├── logo/
+│   │   │   └── logo.png
+│   │   ├── hero/
+│   │   │   └── hero.png
+│   │   ├── projects/
+│   │   │   ├── project1.png
+│   │   │   └── project2.png
+│   │   └── profile.jpg
+│   ├── favicon.ico
+│   └── resume.pdf
+│
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.js
+│   │   │   ├── Footer.js
+│   │   │   └── Navbar.js
+│   │   │
+│   │   ├── sections/
+│   │   │   ├── Hero.js
+│   │   │   ├── About.js
+│   │   │   ├── Projects.js
+│   │   │   ├── Skills.js
+│   │   │   ├── Experience.js
+│   │   │   └── Contact.js
+│   │   │
+│   │   ├── ui/
+│   │   │   ├── Button.js
+│   │   │   ├── Card.js
+│   │   │   └── Loader.js
+│   │   │
+│   │   └── index.js        # Barrel export
+│   │
+│   ├── pages/
+│   │   ├── _app.js
+│   │   ├── _document.js
+│   │   ├── index.js        # Home page
+│   │   ├── projects.js
+│   │   ├── contact.js
+│   │   └── api/
+│   │       └── contact.js  # Email / form backend
+│   │
+│   ├── styles/
+│   │   ├── globals.css
+│   │   └── animations.css
+│   │
+│   ├── data/
+│   │   ├── projects.js
+│   │   ├── skills.js
+│   │   └── experience.js
+│   │
+│   ├── hooks/
+│   │   └── useScroll.js
+│   │
+│   ├── lib/
+│   │   └── email.js        # nodemailer / resend
+│   │
+│   ├── utils/
+│   │   └── constants.js
+│   │
+│   └── seo/
+│       └── Meta.js
+│
+├── .env.local
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+├── package-lock.json
+└── README.md

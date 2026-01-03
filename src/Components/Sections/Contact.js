@@ -67,21 +67,35 @@ export default function Contact() {
             <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Full Name" required className="custom-input" />
             <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email Address" required className="custom-input" />
 
-            <select name="subject" value={form.subject} onChange={handleChange} required className="custom-input">
-              <option value="" disabled>Select Subject</option>
-              <option value="Job Opportunity">Job Opportunity</option>
-              <option value="Freelance">Internship / Freelance</option>
-              <option value="Collaboration">Project Collaboration</option>
-              <option value="Technical">Technical Query</option>
-              <option value="General">General Inquiry</option>
-            </select>
-
+ <select 
+  name="subject" 
+  value={form.subject} 
+  onChange={handleChange} 
+  required 
+  className="custom-input"
+>
+  <option value="" disabled>Select Subject</option>
+  <option value="Job Opportunity">Job Opportunity</option>
+  <option value="Internship / Freelance">Internship / Freelance</option>
+  <option value="Project Collaboration">Project Collaboration</option>
+  <option value="Technical Query">Technical Query</option>
+  <option value="General Inquiry">General Inquiry</option>
+</select>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input type="text" name="company" value={form.company} onChange={handleChange} placeholder="Company (Optional)" className="custom-input" />
               <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="Phone (Optional)" className="custom-input" />
             </div>
 
-            <textarea name="message" rows="5" value={form.message} onChange={handleChange} placeholder="Write your message here..." required className="custom-input resize-none" />
+<textarea 
+  name="message" 
+  rows="5" 
+  value={form.message} 
+  onChange={handleChange} 
+  placeholder="Write your message here..." 
+  required 
+  minLength={10} // Added this to match Mongoose validation
+  className="custom-input resize-none" 
+/>
 
             {status && <p className={`text-sm text-center ${status.includes('successfully') ? 'text-green-400' : 'text-red-400'}`}>{status}</p>}
 
