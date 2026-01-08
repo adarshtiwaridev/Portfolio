@@ -4,7 +4,7 @@ import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
 import Blog from "../components/sections/Blog";
 import Contact from "../components/sections/Contact";
-import Experiences from "../components/sections/Experiance";
+import Experiences from "../components/sections/Experience";
 import Certifications from "../components/sections/Certifications";
 
 // Layout

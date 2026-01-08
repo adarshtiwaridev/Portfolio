@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import PageLoader from "../components/ui/PageLoader";
-import "../styles/globals.css";
+import "../Styles/globals.css";
 
 const MIN_LOADING_TIME = 2000; // 👈 2 seconds
 
