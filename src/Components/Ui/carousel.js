@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
-
+import butt
 import { Card, CardContent } from "./card"
 import {
   Carousel,
@@ -10,7 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "./components/ui/carousel"
 
 export function CarouselPlugin() {
   const plugin = React.useRef(
