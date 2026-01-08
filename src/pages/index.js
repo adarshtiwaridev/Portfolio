@@ -1,20 +1,19 @@
-
-import React from "react";
-
 // Sections
-import Hero from "../components/Sections/Hero";
-import About from "../components/Sections/About";
-import Projects from "../components/Sections/Projects";
-import Blog from "../components/Sections/Blog";
-import Contact from "../components/Sections/Contact";
-// Layout
-import Footer from "../components/layout/Footer";
-import Header from "../components/layout/Header";
-import Experiences from "../components/Sections/Experiance";
+import Hero from "../components/sections/Hero";
+import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
+import Blog from "../components/sections/Blog";
+import Contact from "../components/sections/Contact";
+import Experiences from "../components/sections/Experiance";
+import Certifications from "../components/sections/Certifications";
 
-import Certifications from "../components/Sections/Certifications";
-// Vanta
+// Layout
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+
+// UI
 import VantaNet from "../components/ui/VantaNet";
+
 
 
 const Index = () => {
