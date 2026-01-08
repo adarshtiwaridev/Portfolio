@@ -18,8 +18,11 @@ import VantaNet from "../components/ui/VantaNet";
 
 const Index = () => {
   return (
+
+    
     <main className=" text-white">
       <Header />
+      
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center">

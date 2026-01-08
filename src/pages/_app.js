@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import PageLoader from "../components/ui/PageLoader";
 import "../Styles/globals.css";
 
-const MIN_LOADING_TIME = 2000; // 👈 2 seconds
+
+
+const MIN_LOADING_TIME = 3000; // 👈 2 seconds
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
