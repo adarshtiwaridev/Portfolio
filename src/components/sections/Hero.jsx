@@ -72,7 +72,7 @@ export default function Hero() {
     <div className="flex flex-wrap gap-4 pt-5">
       {/* Primary Button */}
       <a
-        href="/Adarsh-resume.pdf"
+        href="/Adarsh_Nextjs.pdf"
         download
         className="
           px-7 py-3.5 rounded-xl
