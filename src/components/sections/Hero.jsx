@@ -130,13 +130,13 @@ export default function Hero() {
 </div>
 
 
-      {/* SCROLL TO TOP */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-28 right-6 w-12 z-99 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
-      >
-        <ArrowUp />
-      </button>
+        {/* SCROLL TO TOP */}
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-28 right-6 w-12 z-99 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
+        >
+          <ArrowUp />
+        </button>
 
     
     </section>

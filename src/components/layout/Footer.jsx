@@ -1,105 +1,123 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 
 export default function Footer() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.1 } 
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+  };
+
   return (
-    <footer
-      className="
-        mt-24 border-t
-        border-zinc-200 dark:border-white/10
-        bg-linear-to-b
-        from-white via-zinc-50 to-white
-        dark:from-black dark:via-zinc-950 dark:to-black
-      "
-    >
-      <div className="max-w-6xl mx-auto px-6 py-14">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          
-          {/* Brand */}
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
-              Adarsh Tiwari
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Full Stack Developer specializing in modern web experiences using
-              Next.js, React, and scalable backend systems. Focused on clean
-              architecture, performance, and real-world impact.
-            </p>
-          </div>
+    <footer className="relative mt-40 border-t border-zinc-200 dark:border-white/10 bg-white dark:bg-[#050505] overflow-hidden">
+      {/* Huge Background Text */}
+      <div className="absolute -bottom-2 left-3 right-0 pointer-events-none select-none overflow-hidden whitespace-nowrap opacity-[0.03] dark:opacity-[0.09]">
+        <h2 className="text-[20vw] font-black leading-none">ADARSH</h2>
+      </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-              Quick Links
-            </h4>
-            <ul className="mt-4 space-y-2 text-sm">
-              {[
-                ["About", "#about"],
-                ["Experience", "#experiences"],
-                ["Projects", "#projects"],
-                ["Skills", "#about"],
-                ["Contact", "#contact"],
-              ].map(([label, link]) => (
-                <li key={label}>
-                  <a
-                    href={link}
-                    className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-cyan-400 transition"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact / Social */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-              Connect
-            </h4>
-
-            <ul className="mt-4 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <li>Email: <span className="font-medium">adarshtiwaridev01@gmail.com</span></li>
-              <li>Location: India · Remote</li>
-            </ul>
-
-            <div className="mt-4 flex gap-4 text-sm">
-              <a
-                href="https://github.com/adarshtiwaridev"
-                target="_blank"
-                className="hover:text-blue-600 dark:hover:text-cyan-400 transition"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://linkedin.com/in/adarshtiwaridev"
-                target="_blank"
-                className="hover:text-blue-600 dark:hover:text-cyan-400 transition"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div
-          className="
-            mt-12 pt-6 border-t
-            border-zinc-200 dark:border-white/10
-            flex flex-col md:flex-row
-            items-center justify-between gap-4
-          "
+      <div className="max-w-6xl mx-auto px-6 py-24 relative z-10">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-20"
         >
-          <p className="text-xs text-zinc-500">
-            © {new Date().getFullYear()} Adarsh Tiwari. All rights reserved.
-          </p>
+          {/* Left Side: The "Hook" */}
+          <div className="space-y-8">
+            <motion.h3 variants={itemVariants} className="text-5xl md:text-7xl font-bold tracking-tighter dark:text-white">
+              Let's build <br /> 
+              <span className="text-blue-600 dark:text-cyan-400">something iconic.</span>
+            </motion.h3>
+            
+            <motion.div variants={itemVariants}>
+              <a 
+                href="mailto:adarshtiwaridev01@gmail.com" 
+                className="group inline-flex items-center gap-4 text-xl font-medium dark:text-zinc-300"
+              >
+                adarshtiwaridev01@gmail.com
+                <span className="h-[2px] w-0 bg-blue-600 dark:bg-cyan-400 transition-all group-hover:w-12" />
+              </a>
+            </motion.div>
+          </div>
 
-          <p className="text-xs tracking-wide text-zinc-500">
-            Built with{" "}
-            <span className="font-medium text-zinc-700 dark:text-zinc-300">
-              Next.js • Tailwind • Modern Web
-            </span>
+          {/* Right Side: Links */}
+          <div className="grid grid-cols-2 gap-10">
+        <motion.div variants={itemVariants} className="space-y-6">
+  <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-zinc-400">
+    Socials
+  </h4>
+
+  <ul className="space-y-4">
+    {[
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/adarshtiwaridev",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/adarshtiwaridev",
+      },
+      {
+        name: "Twitter",
+        url: "https://twitter.com/adarshtiwaridev",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/its_adarsh_02794",
+      },
+    ].map((social) => (
+      <li key={social.name}>
+        <motion.a
+          whileHover={{ x: 10 }}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          {social.name}
+        </motion.a>
+      </li>
+    ))}
+  </ul>
+</motion.div>
+
+
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-zinc-400">Navigation</h4>
+              <ul className="space-y-4">
+                {["About", "Projects", "Experience", "Contact"].map((link) => (
+                  <li key={link}>
+                    <a href={`#${link.toLowerCase()}`} className="text-lg text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Final Bottom Row */}
+        <div className="mt-32 pt-8 border-t border-zinc-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-sm text-zinc-500 font-mono">
+            ©{new Date().getFullYear()} — BORN IN INDIA
+          </p>
+          
+          <div className="flex items-center gap-2">
+             <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+             <span className="text-sm text-zinc-500 font-mono uppercase tracking-tighter">Available for freelance</span>
+          </div>
+
+          <p className="text-sm text-zinc-500 font-mono italic">
+            "Design is thinking made visual"
           </p>
         </div>
       </div>

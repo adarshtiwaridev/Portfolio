@@ -35,8 +35,8 @@ export default function Header() {
   if (!mounted) return null;
 
   return (
-    <header className=" relative top-0 z-50 bg-gradient-to- from-white via-zinc-100 to-white dark:from-black dark:via-zinc-900 dark:to-black ">
-      <div className="max-w-7xl sticky mx-auto px-4 h-20 flex items-center justify-between">
+    <header className=" top-0 z-50 bg-gradient-to- from-white via-zinc-100 to-white dark:from-black dark:via-zinc-900 dark:to-black ">
+      <div className="max-w-7xl   mx-auto px-4 h-20 flex  items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-3" >
